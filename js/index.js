@@ -1,6 +1,6 @@
 //step 1: generate a random number
 function getRandomNumber() {
-    var RandomNumber = Math.floor(Math.random() * 6) + 1;
+    var RandomNumber = (Math.floor(Math.random() * 6) + 1);
     return RandomNumber
 }
 
@@ -18,11 +18,11 @@ $(document).ready(function(){
     var $button = $('#roll-dice');
     var $dice = $('#dice')
 
-    $button.click(function){
+    $button.click(function(){
         var number = getRandomNumber();
         var diceClass = GetDiceClass(number);
 
         $dice.removeClass();
         $dice.addClass(diceClass);
-    }
+    });
 });
